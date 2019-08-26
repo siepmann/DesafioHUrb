@@ -27,13 +27,14 @@ struct Hotel: Codable {
     let sku: String?
     let id: String?
     let name: String?
+    let stars: Int?
     private let address: Address?
     private let amenities: [AmenityElement]?
     private let price: ResultPrice?
     private let gallery: [Gallery]?
     
     enum CodingKeys: String, CodingKey {
-        case sku, name, id
+        case sku, name, id, stars
         case address, amenities, price, gallery
     }
     
@@ -54,7 +55,7 @@ struct Hotel: Codable {
     
     func formattedPrice() -> String {
         guard let currency = self.price?.currency,
-            let price = self.price?.currentPrice else { return "" }
+            let price = self.price?.amount else { return "" }
         
         
         let formatter = NumberFormatter()
@@ -98,10 +99,9 @@ struct Gallery: Codable {
 // MARK: - ResultPrice
 struct ResultPrice: Codable {
     let currency: String?
-    let currentPrice, amount: Double?
+    let amount: Double?
     
     enum CodingKeys: String, CodingKey {
         case currency, amount
-        case currentPrice = "current_price"
     }
 }

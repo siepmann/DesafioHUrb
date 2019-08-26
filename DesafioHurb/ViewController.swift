@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    private let maxNumberOfStars = 5
+    private var numberOfSections = 0
+    
+    private var groupedHotels: Dictionary<Int?, [Hotel]>? {
+        didSet {
+            guard let keys = groupedHotels?.keys else { return }
+            numberOfSections = keys.count
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,11 +27,24 @@ class ViewController: UIViewController {
         let service = APIFactory.shared.hotelsService
         
         
-        service.fetchHotels(router: router) { (results: Result<HotelsModel>) in
-            print(results)
+        service.fetchHotels(router: router) { [weak self] (results: Result<HotelsModel>) in
+            guard let hotels = results.value?.results else { return }
+            self?.groupedHotels = Dictionary(grouping: hotels, by: { $0.stars })
         }
     }
-
-
+    
+    func getHotelBy(indexPath: IndexPath) -> Hotel? {
+        let currentSection = maxNumberOfStars - indexPath.section
+        let currentHotelPosition = indexPath.row
+        
+        return groupedHotels?[currentSection]?[currentHotelPosition]
+    }
+    
+    func getNumberOfRowsInSection(section: Int) -> Int {
+        let currentSection = maxNumberOfStars - section
+        guard let hotels = groupedHotels, let count = hotels[currentSection]?.count else { return 0 }
+        
+        return count
+    }
 }
 

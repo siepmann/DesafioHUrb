@@ -25,6 +25,7 @@
 		9421C756230F11ED001F3388 /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C755230F11ED001F3388 /* CustomSessionDelegate.swift */; };
 		9421C759230F121E001F3388 /* www.hotelurbano.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9421C758230F121E001F3388 /* www.hotelurbano.com.cer */; };
 		9421C75B230F127B001F3388 /* CustomServerTrustPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C75A230F127B001F3388 /* CustomServerTrustPolicyManager.swift */; };
+		94B00C7A231414A700A582C7 /* www.hotelurbano.com1.cer in Resources */ = {isa = PBXBuildFile; fileRef = 94B00C79231414A700A582C7 /* www.hotelurbano.com1.cer */; };
 		A5868940446854EC1E1ADA00 /* Pods_DesafioHurb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6EE8FC1465EFDC963F20940 /* Pods_DesafioHurb.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9421C755230F11ED001F3388 /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		9421C758230F121E001F3388 /* www.hotelurbano.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = www.hotelurbano.com.cer; sourceTree = "<group>"; };
 		9421C75A230F127B001F3388 /* CustomServerTrustPolicyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomServerTrustPolicyManager.swift; sourceTree = "<group>"; };
+		94B00C79231414A700A582C7 /* www.hotelurbano.com1.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = www.hotelurbano.com1.cer; sourceTree = "<group>"; };
 		A6EE8FC1465EFDC963F20940 /* Pods_DesafioHurb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioHurb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5E7D5444C2614F1EA3CAE3 /* Pods_DesafioHurbTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DesafioHurbTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				9421C758230F121E001F3388 /* www.hotelurbano.com.cer */,
+				94B00C79231414A700A582C7 /* www.hotelurbano.com1.cer */,
 			);
 			path = PublicKey;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				9421C72D230ED561001F3388 /* LaunchScreen.storyboard in Resources */,
 				9421C72A230ED561001F3388 /* Assets.xcassets in Resources */,
 				9421C759230F121E001F3388 /* www.hotelurbano.com.cer in Resources */,
+				94B00C7A231414A700A582C7 /* www.hotelurbano.com1.cer in Resources */,
 				9421C728230ED560001F3388 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
