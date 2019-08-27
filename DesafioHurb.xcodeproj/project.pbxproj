@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5A64982EB3AD741256F8C6A8 /* Pods_DesafioHurbTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5E7D5444C2614F1EA3CAE3 /* Pods_DesafioHurbTests.framework */; };
+		94055CDD23155ECE00320969 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94055CDC23155ECE00320969 /* MainPresenter.swift */; };
+		94055CE023155EF200320969 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94055CDF23155EF200320969 /* MainView.swift */; };
+		94055CE423155F1800320969 /* HotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94055CE223155F1800320969 /* HotelTableViewCell.swift */; };
+		94055CE523155F1800320969 /* HotelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94055CE323155F1800320969 /* HotelTableViewCell.xib */; };
 		9421C723230ED560001F3388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C722230ED560001F3388 /* AppDelegate.swift */; };
-		9421C725230ED560001F3388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C724230ED560001F3388 /* ViewController.swift */; };
+		9421C725230ED560001F3388 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C724230ED560001F3388 /* MainViewController.swift */; };
 		9421C728230ED560001F3388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9421C726230ED560001F3388 /* Main.storyboard */; };
 		9421C72A230ED561001F3388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9421C729230ED561001F3388 /* Assets.xcassets */; };
 		9421C72D230ED561001F3388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9421C72B230ED561001F3388 /* LaunchScreen.storyboard */; };
@@ -44,9 +48,13 @@
 		4E71A8F0EE804BE3F915350C /* Pods-DesafioHurb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioHurb.debug.xcconfig"; path = "Target Support Files/Pods-DesafioHurb/Pods-DesafioHurb.debug.xcconfig"; sourceTree = "<group>"; };
 		6C7DB22817A1783081DDCE57 /* Pods-DesafioHurb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioHurb.release.xcconfig"; path = "Target Support Files/Pods-DesafioHurb/Pods-DesafioHurb.release.xcconfig"; sourceTree = "<group>"; };
 		792FEE2205FB0ABADB62BEBF /* Pods-DesafioHurbTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesafioHurbTests.debug.xcconfig"; path = "Target Support Files/Pods-DesafioHurbTests/Pods-DesafioHurbTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94055CDC23155ECE00320969 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		94055CDF23155EF200320969 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		94055CE223155F1800320969 /* HotelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewCell.swift; sourceTree = "<group>"; };
+		94055CE323155F1800320969 /* HotelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelTableViewCell.xib; sourceTree = "<group>"; };
 		9421C71F230ED560001F3388 /* DesafioHurb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioHurb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9421C722230ED560001F3388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9421C724230ED560001F3388 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9421C724230ED560001F3388 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9421C727230ED560001F3388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9421C729230ED561001F3388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9421C72C230ED561001F3388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,6 +107,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		94055CDA23155EB300320969 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94055CE623155F7000320969 /* Main */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		94055CE123155F0300320969 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				94055CE223155F1800320969 /* HotelTableViewCell.swift */,
+				94055CE323155F1800320969 /* HotelTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		94055CE623155F7000320969 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94055CE123155F0300320969 /* Cell */,
+				94055CDC23155ECE00320969 /* MainPresenter.swift */,
+				94055CDF23155EF200320969 /* MainView.swift */,
+				9421C724230ED560001F3388 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		9421C716230ED560001F3388 = {
 			isa = PBXGroup;
 			children = (
@@ -122,12 +158,12 @@
 		9421C721230ED560001F3388 /* DesafioHurb */ = {
 			isa = PBXGroup;
 			children = (
-				9421C757230F120D001F3388 /* PublicKey */,
-				9421C750230ED8D1001F3388 /* Models */,
-				9421C74D230ED628001F3388 /* HotelsService */,
 				9421C742230ED56B001F3388 /* APIService */,
+				9421C74D230ED628001F3388 /* HotelsService */,
+				9421C750230ED8D1001F3388 /* Models */,
+				9421C757230F120D001F3388 /* PublicKey */,
+				94055CDA23155EB300320969 /* ViewController */,
 				9421C722230ED560001F3388 /* AppDelegate.swift */,
-				9421C724230ED560001F3388 /* ViewController.swift */,
 				9421C726230ED560001F3388 /* Main.storyboard */,
 				9421C729230ED561001F3388 /* Assets.xcassets */,
 				9421C72B230ED561001F3388 /* LaunchScreen.storyboard */,
@@ -280,6 +316,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94055CE523155F1800320969 /* HotelTableViewCell.xib in Resources */,
 				9421C72D230ED561001F3388 /* LaunchScreen.storyboard in Resources */,
 				9421C72A230ED561001F3388 /* Assets.xcassets in Resources */,
 				9421C759230F121E001F3388 /* www.hotelurbano.com.cer in Resources */,
@@ -372,12 +409,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9421C74B230ED5BE001F3388 /* Result.swift in Sources */,
+				94055CE023155EF200320969 /* MainView.swift in Sources */,
 				9421C752230ED8DA001F3388 /* HotelsModel.swift in Sources */,
 				9421C754230F0DF7001F3388 /* HotelsService.swift in Sources */,
-				9421C725230ED560001F3388 /* ViewController.swift in Sources */,
+				9421C725230ED560001F3388 /* MainViewController.swift in Sources */,
 				9421C74A230ED5BE001F3388 /* APIRouter.swift in Sources */,
 				9421C749230ED5BE001F3388 /* APIFactory.swift in Sources */,
+				94055CDD23155ECE00320969 /* MainPresenter.swift in Sources */,
 				9421C75B230F127B001F3388 /* CustomServerTrustPolicyManager.swift in Sources */,
+				94055CE423155F1800320969 /* HotelTableViewCell.swift in Sources */,
 				9421C723230ED560001F3388 /* AppDelegate.swift in Sources */,
 				9421C74F230ED639001F3388 /* HotelsRouter.swift in Sources */,
 				9421C756230F11ED001F3388 /* CustomSessionDelegate.swift in Sources */,

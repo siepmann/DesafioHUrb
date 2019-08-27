@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - Hotels
 struct HotelsModel: Codable {
-    let results: [Hotel]?
+    let hotels: [Hotel]?
     let pagination: Pagination?
 }
 
