@@ -31,7 +31,15 @@ class HotelTableViewCell: UITableViewCell {
     }
 
     func setupWith(hotel: Hotel) {
-        
+        if let imageURL = hotel.spotlightImage() {
+            self.headerImageView.load(url: imageURL)
+        } else {
+            //get placeholderImage
+        }
+        priceLabel.text = hotel.formattedPrice()
+        amenitiesLabel.text = hotel.listAmenities()
+        locationLabel.text = hotel.locationDescription()
+        nameLabel.text = hotel.name ?? ""
     }
     
     func setupErrorCell() {

@@ -14,6 +14,7 @@
 		94055CE523155F1800320969 /* HotelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94055CE323155F1800320969 /* HotelTableViewCell.xib */; };
 		94055CE9231592D100320969 /* ReusableCellIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94055CE8231592D100320969 /* ReusableCellIdentifiable.swift */; };
 		94055CEC2315930E00320969 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94055CEB2315930E00320969 /* UITableView.swift */; };
+		94055D1C2315A1DE00320969 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94055D1B2315A1DE00320969 /* UIImageView.swift */; };
 		9421C723230ED560001F3388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C722230ED560001F3388 /* AppDelegate.swift */; };
 		9421C725230ED560001F3388 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9421C724230ED560001F3388 /* MainViewController.swift */; };
 		9421C728230ED560001F3388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9421C726230ED560001F3388 /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		94055CE323155F1800320969 /* HotelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotelTableViewCell.xib; sourceTree = "<group>"; };
 		94055CE8231592D100320969 /* ReusableCellIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellIdentifiable.swift; sourceTree = "<group>"; };
 		94055CEB2315930E00320969 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		94055D1B2315A1DE00320969 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		9421C71F230ED560001F3388 /* DesafioHurb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesafioHurb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9421C722230ED560001F3388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9421C724230ED560001F3388 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				94055CEB2315930E00320969 /* UITableView.swift */,
+				94055D1B2315A1DE00320969 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				94055CDD23155ECE00320969 /* MainPresenter.swift in Sources */,
 				9421C75B230F127B001F3388 /* CustomServerTrustPolicyManager.swift in Sources */,
 				94055CE423155F1800320969 /* HotelTableViewCell.swift in Sources */,
+				94055D1C2315A1DE00320969 /* UIImageView.swift in Sources */,
 				9421C723230ED560001F3388 /* AppDelegate.swift in Sources */,
 				94055CEC2315930E00320969 /* UITableView.swift in Sources */,
 				9421C74F230ED639001F3388 /* HotelsRouter.swift in Sources */,

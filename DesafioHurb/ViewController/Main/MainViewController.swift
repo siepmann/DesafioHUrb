@@ -20,6 +20,8 @@ class MainViewController: UIViewController {
         presenter = MainPresenter(delegate: self)
         
         tableView.registerTableViewCell(HotelTableViewCell.self)
+        tableView.estimatedRowHeight = 250
+        tableView.rowHeight = UITableView.automaticDimension
         
         presenter.fetchHotels(from: "gramado")
     }
@@ -39,7 +41,7 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as HotelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: HotelTableViewCell.reusableIdentifier, for: indexPath) as! HotelTableViewCell
         if let hotel = presenter.getHotelBy(indexPath: indexPath) {
             cell.setupWith(hotel: hotel)
         } else {

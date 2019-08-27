@@ -12,6 +12,11 @@ import Foundation
 struct HotelsModel: Codable {
     let hotels: [Hotel]?
     let pagination: Pagination?
+    
+    enum CodingKeys: String, CodingKey {
+        case hotels = "results"
+        case pagination
+    }
 }
 
 // MARK: - Pagination
