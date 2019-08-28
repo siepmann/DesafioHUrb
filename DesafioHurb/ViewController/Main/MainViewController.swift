@@ -52,6 +52,12 @@ extension MainViewController: UITableViewDataSource {
     }
 }
 
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+}
+
 extension MainViewController: MainViewProtocol {
     func didFetchWithSuccess() {
         tableView.isHidden = false

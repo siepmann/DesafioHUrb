@@ -7,6 +7,7 @@ target 'DesafioHurb' do
 
   # Pods for DesafioHurb
   pod 'Alamofire'
+  pod 'Kingfisher'
 
   target 'DesafioHurbTests' do
     inherit! :search_paths
