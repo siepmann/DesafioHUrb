@@ -6,19 +6,13 @@
 //  Copyright © 2019 Guilherme Siepmann. All rights reserved.
 //
 
-import Foundation
-import UIKit
+import Kingfisher
 
 extension UIImageView {
-    func load(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
+    func setImageWithUrl(_ url: URL?,  placeHolder: String = "") {
+        self.kf.setImage(with: url,
+                         placeholder: Image(named: placeHolder),
+                         options: [.transition(.fade(1)), .cacheMemoryOnly]
+                         )
     }
 }
