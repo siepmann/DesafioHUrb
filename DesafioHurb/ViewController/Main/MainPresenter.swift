@@ -25,6 +25,7 @@ class MainPresenter {
     }
     
     func fetchHotels(from location: String) {
+        self.delegate?.loadingState()
         let router = HotelsRouter.getHotelsFor(city: location, page: 1)
         let service = APIFactory.shared.hotelsService
         

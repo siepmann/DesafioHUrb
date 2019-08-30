@@ -25,7 +25,8 @@ enum HotelsRouter: APIRouter {
         case .getHotelsFor(let city, let page):
             return [
                 "q" : city,
-                "page" : page
+                "page" : page,
+                "sort" : "stars"
             ]
         }
     }

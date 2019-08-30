@@ -9,6 +9,7 @@
 import Foundation
 
 protocol MainViewProtocol: NSObjectProtocol {
+    func loadingState()
     func didFetchWithSuccess()
     func didFetchWithError(error: Error)
 }

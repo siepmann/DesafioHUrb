@@ -18,16 +18,17 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = MainPresenter(delegate: self)
+        activityIndicator.hidesWhenStopped = true
         
         tableView.registerTableViewCell(HotelTableViewCell.self)
-        tableView.estimatedRowHeight = 250
-        tableView.rowHeight = UITableView.automaticDimension
         
         presenter.fetchHotels(from: "gramado")
     }
     
     @IBAction func redoSearch(_ sender: AnyObject) {
-        
+        activityIndicator.startAnimating()
+        tableView.isHidden = true
+        errorView.isHidden = true
     }
 }
 
@@ -50,6 +51,10 @@ extension MainViewController: UITableViewDataSource {
         
         return cell
     }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "section \(section)"
+//    }
 }
 
 extension MainViewController: UITableViewDelegate {
@@ -59,14 +64,22 @@ extension MainViewController: UITableViewDelegate {
 }
 
 extension MainViewController: MainViewProtocol {
+    func loadingState() {
+        tableView.isHidden = true
+        errorView.isHidden = true
+        activityIndicator.startAnimating()
+    }
+    
     func didFetchWithSuccess() {
         tableView.isHidden = false
         errorView.isHidden = true
+        activityIndicator.stopAnimating()
         tableView.reloadData()
     }
     
     func didFetchWithError(error: Error) {
         tableView.isHidden = true
         errorView.isHidden = false
+        activityIndicator.stopAnimating()
     }
 }
